@@ -1,0 +1,47 @@
+Algoritmo ejercicio13
+	Definir MAX como entero
+	Definir POS como entero
+	MAX<-10
+	
+	Definir num Como Real
+	Dimension num[MAX]
+	cargar(num,POS)
+	listar(num,POS)
+	Escribir POS
+	
+	
+FinAlgoritmo
+SubProceso cargar(num,POS)
+	band<-Verdadero
+	
+	Mientras band Hacer
+		POS<-POS+1
+		Escribir "Ingrese: "
+		Leer num[POS]
+		Escribir "Desea Continuar: "
+		Leer resp
+		Si resp="n" o resp="N" Entonces
+			band<-Falso
+		Fin Si
+		
+	Fin Mientras	
+FinSubProceso
+
+SubProceso listar(num,MAX)
+	Definir i como entero
+	Escribir "Contenido del Vector"
+	Para i<-1 Hasta MAX Con Paso 1 Hacer
+		Escribir num[i] " " Sin Saltar
+	Fin Para
+FinSubProceso
+
+SubProceso a<-maximo(num,MAX)
+	Definir i como entero
+	maxi<-num[1]
+	Para i<-2 Hasta MAX Con Paso 1 Hacer
+		Si num[i]>maxi Entonces
+			maxi <- num[i]
+		FinSi
+	Fin Para
+	a<-maxi
+FinSubProceso
